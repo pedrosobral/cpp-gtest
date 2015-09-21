@@ -46,3 +46,12 @@ TEST(nearestToZero, secondClosest)
         EXPECT_EQ(i, rando.nearestToZero(i+1, i));
     }
 }
+
+TEST(nearestToZero, negativeNumbers)
+{
+    Rando rando;
+
+    for (int i = -1; i < -10; i--) {
+        EXPECT_EQ(i, rando.nearestToZero(i-1, i));
+    }
+}
